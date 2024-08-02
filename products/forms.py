@@ -16,5 +16,5 @@ class ProductForm(forms.Form):
             price = self.cleaned_data['price'],
             available = self.cleaned_data['available'],
             photo =self.cleaned_data ['photo'],
-    
         )
+        
