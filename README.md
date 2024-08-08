@@ -11,6 +11,8 @@ bash
 python3 manage.py createsuperuser
 
 Para iniciar sesión en el sitio, ve a la URL /admin (e.j. http://127.0.0.1:8000/admin) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página login, y entonces volverás a la URL de /admin después de haber ingresado tus datos).
+
+python3 manage.py runserver
 ```
 
 ### ¿Cómo registramos un modelo en el Django Admin?
@@ -38,6 +40,13 @@ Esto permite buscar productos por nombre.
 ```
 ### ¿Cómo editamos y guardamos productos?
 Desde la lista de productos, haz clic en un producto para abrir el formulario de edición. Realiza los cambios necesarios y selecciona una de las opciones de guardado.
+
+### Crear users
+
+```
+./manage.py startapp users 
+```
+
 
 ### ¿Cómo añadimos imágenes a los productos?
 - Asegúrate de tener un campo de imagen en tu modelo.
@@ -81,3 +90,7 @@ Si el editor no encuentra las dependencias, debemos asegurarnos de que Visual St
 
 ¿Cómo añadimos un método str?
 Para una representación textual del modelo, añadimos un método __str__ que retorna el nombre del producto.
+
+## `Recursos`
+
+[Tutorial: Implementa un Sistema de Inicio de Sesión en Django 4.1 con Autenticación Integrada](https://www.youtube.com/watch?v=6rMSouSx3II)
