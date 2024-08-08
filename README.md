@@ -6,6 +6,12 @@ Primero, asegúrate de que el proyecto de Django esté corriendo. Luego, accede 
 
 ### ¿Cómo creamos un superusuario?
 Para acceder al admin, necesitas un superusuario. Detén el servidor y ejecuta el comando createsuperuser. Proporciona un nombre de usuario, correo electrónico y contraseña. Reinicia el servidor y usa estas credenciales para iniciar sesión en el admin.
+```
+bash
+python3 manage.py createsuperuser
+
+Para iniciar sesión en el sitio, ve a la URL /admin (e.j. http://127.0.0.1:8000/admin) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página login, y entonces volverás a la URL de /admin después de haber ingresado tus datos).
+```
 
 ### ¿Cómo registramos un modelo en el Django Admin?
 - Abre el archivo admin.py dentro de tu aplicación.
