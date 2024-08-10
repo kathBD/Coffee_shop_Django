@@ -94,3 +94,5 @@ Para una representación textual del modelo, añadimos un método __str__ que re
 ## `Recursos`
 
 [Tutorial: Implementa un Sistema de Inicio de Sesión en Django 4.1 con Autenticación Integrada](https://www.youtube.com/watch?v=6rMSouSx3II)
+
+Crispy Form Tailwind: https://github.com/django-crispy-forms/crispy-tailwind
