@@ -1,18 +1,23 @@
 
+{% extends 'base.html' %}
 
-
-
-<form action="{% url 'add_product' %}" method="post">
-    <div class="space-y-12">
-        <div class="border-b border-gray-900/10 pb-12">
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Agregar Producto</h2>
-          <p class="mt-1 text-sm leading-6 text-gray-600">Formulario para agregar nuevos productos</p>
-    
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+{% block content %}
+<div class="container mx-auto px-4 py-6">
+    <form action="{% url 'add_product' %}" method="post" class="bg-white shadow-md rounded-lg p-8 space-y-6">
+        {% csrf_token %}
+        <h2 class="text-2xl font-bold leading-tight text-gray-900">Agregar Producto</h2>
+        <p class="text-sm text-gray-600 mb-6">Formulario para agregar nuevos productos.</p>
+        
+        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+           {{ form.as_p }} 
+        
          
-          </div>
             
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Agregar</button>
-</form>
+        </div>
+        
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+            Agregar
+        </button>
+    </form>
+</div>
+{% endblock content %}
