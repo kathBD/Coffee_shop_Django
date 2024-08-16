@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 from products.models import Product
 
 
@@ -20,5 +19,4 @@ class OrderProduct(models.Model):
 
     def __str__(self) -> str:
         return f"{self.order} - {self.product}"
-
 
