@@ -29,3 +29,13 @@ class CreateOrderProductView(LoginRequiredMixin, CreateView):
         form.instance.quantity = 1
         form.save()
         return super().form_valid(form)
+
+def crear_orden(request):
+    if request.method == 'POST':
+        form = OrdenForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('orden_creada')
+    else:
+        form = OrdenForm()
+    return render(request, 'crear_orden.html', {'form': form})
