@@ -1,3 +1,38 @@
+
+# Nombre del proyecto:
+CoffeeShop
+
+## Descripción del proyecto:
+CoffeeShop es una aplicación web django que simula una cafetería en línea donde los usuarios pueden explorar un menú de café y la página de detalles de cada artículo del menú, registrarse, iniciar sesión, agregar artículos a su orden.
+
+#  Estructura del proyecto:
+> El proyecto consta de 4 aplicaciones principales:
+
+- Aplicación de usuarios: esta aplicación se encarga de la autenticación y el registro de usuarios. Los usuarios pueden registrarse, iniciar sesión y administrar su página de perfil. El registro se realizará mediante correo electrónico y contraseña, por lo que se requiere personalizar el modelo de usuario y utilizar la clase AbstractUser. Además, cada usuario debe completar el registro mediante la confirmación de correo electrónico en el correo electrónico para activarlo. También se necesita un código OTP para confirmar el número de teléfono móvil del usuario si el usuario elige habilitar la autenticación de dos factores. En esta aplicación, se necesitan señales para enviar un correo electrónico de confirmación mediante uid y token, así como para crear un perfil de usuario.
+
+- Aplicación Páginas: La aplicación Páginas no tiene modelos, solo es responsable de mostrar las páginas principales de la aplicación para los usuarios y el administrador como el índice, acerca de, el panel de administración y el gráfico del panel y otras páginas.
+
+- Aplicación Productos: La aplicación Productos es responsable de toda la actividad relacionada con el producto (café), sirve para mostrar el menú de café y los detalles del café. Incluye las siguientes funciones:
+
+- Todos los productos(productos): Muestra una lista del menú de café que contiene todos los productos con imágenes, nombres, descripciones, precios, número de visitas, me gusta, calificaciones y reseñas.
+
+- Buscar producto: los usuarios pueden buscar productos según el nombre, la descripción, el rango de precios y el buscador puede seleccionar si la búsqueda será sensible o no.
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/e2d3d168-c9af-4627-9129-03eb85aab625)
+![image](https://github.com/user-attachments/assets/a4c3776b-24a8-4152-bd72-e7e940c0557b)
+
+
+![image](https://github.com/user-attachments/assets/e8937fa8-ea72-44c7-a7dc-b1de1183f20f)
+
+![image](https://github.com/user-attachments/assets/8b11e797-5cdc-4e1f-b612-fae9ba62d537)
+
+
+
+
 ### ¿Qué es el Django Admin?
 Django Admin es una herramienta integrada en Django que permite administrar modelos y objetos a través de una interfaz web intuitiva y fácil de configurar.
 
